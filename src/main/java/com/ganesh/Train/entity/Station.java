@@ -14,7 +14,7 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-public class station {
+public class Station {
 
 
     @Id

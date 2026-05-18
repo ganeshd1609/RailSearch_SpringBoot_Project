@@ -1,7 +1,14 @@
 package com.ganesh.Train.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Getter
+@Setter
 @Entity
 public class TrainSchedule {
 
@@ -19,10 +26,14 @@ public class TrainSchedule {
 
     @ManyToOne
     @JoinColumn(name = "source_station_id")
-    private station source;
+    private Station source;
 
 
     @ManyToOne
     @JoinColumn(name = "destination_station_id")
-    private station destination;
+    private Station destination;
+
+
+    private String arrivalTime;
+    private String departureTime;
 }
