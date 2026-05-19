@@ -1,5 +1,6 @@
 package com.ganesh.Train.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,6 +20,7 @@ public class TrainSchedule {
 
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "train_id")
     Train train;
 

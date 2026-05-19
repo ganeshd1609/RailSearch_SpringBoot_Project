@@ -1,5 +1,7 @@
 package com.ganesh.Train.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.ganesh.Train.repo.TrainRepository;
 import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import lombok.*;
@@ -7,12 +9,14 @@ import lombok.*;
 import java.util.List;
 
 @NoArgsConstructor
-@AllArgsConstructor
+
 @ToString
 @Getter
 @Setter
 @Entity
 public class Train {
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,8 +28,14 @@ public class Train {
     private String trainNumber;
 
 
-    @OneToMany(mappedBy = "Train" ,cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "train" ,cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
+    @JsonManagedReference
     List<TrainSchedule> scheduleList;
 
-
+    public Train(Long id, String trainName, String trainNumber, List<TrainSchedule> scheduleList) {
+        this.id = id;
+        this.trainName = trainName;
+        this.trainNumber = trainNumber;
+        this.scheduleList = scheduleList;
+    }
 }

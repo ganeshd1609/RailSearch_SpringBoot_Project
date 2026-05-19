@@ -5,6 +5,7 @@ import com.ganesh.Train.entity.Train;
 import com.ganesh.Train.repo.TrainRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,13 +16,7 @@ public class TrainService {
 
 
 
-
-
-
-
-
-
-
+    @Autowired
     private TrainRepository trainRepository;
 
     public List<Train> getAllTrains() {
@@ -31,7 +26,8 @@ public class TrainService {
     }
 
 
-    public void addTrain() {
+    public Train addTrain(Train train) {
+        return trainRepository.save(train);
 
     }
 }
