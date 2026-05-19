@@ -40,6 +40,6 @@ public class TrainSearchController {
     @GetMapping("/byName")
     public List<TrainSchedule> findTrainByStationName(@RequestParam String sourceStationName, @RequestParam String  destinationStationName){
 
-        return trainSearchService.findTrainByStationName(sourceStationName.toString(),destinationStationName);
+        return trainSearchService.findTrainByStationName(sourceStationName,destinationStationName);
     }
 }

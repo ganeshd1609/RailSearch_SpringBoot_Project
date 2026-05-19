@@ -21,13 +21,11 @@ public class TrainSearchService {
 
 
     public List<TrainSchedule> findTrainByStationCode(String sourcecode, String destinationcode) {
-       return
-               trainScheduleRepository.findBySource_StationcodeAndDestination_Stationcode(sourcecode,destinationcode);
+       return trainScheduleRepository.findBySource_StationcodeAndDestination_Stationcode(sourcecode,destinationcode);
     }
 
     public List<TrainSchedule> findTrainByStationName(String sourceStationName, String destinationStationname) {
 
-        return
-                trainScheduleRepository.findBySource_StationnameAndDestination_Stationname(sourceStationName,destinationStationname);
+        return trainScheduleRepository.findBySource_StationnameAndDestination_Stationname(sourceStationName,destinationStationname);
     }
 }
