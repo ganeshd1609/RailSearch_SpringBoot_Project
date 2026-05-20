@@ -1,5 +1,6 @@
 package com.ganesh.Train.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.ganesh.Train.repo.TrainRepository;
 import jakarta.persistence.*;
@@ -29,7 +30,7 @@ public class Train {
 
 
     @OneToMany(mappedBy = "train" ,cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
-    @JsonManagedReference
+    @JsonBackReference
     List<TrainSchedule> scheduleList;
 
     public Train(Long id, String trainName, String trainNumber, List<TrainSchedule> scheduleList) {
