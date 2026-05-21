@@ -54,11 +54,11 @@ public class Test {
 
         trainRepository.saveAll(List.of(Rajdhadni,duranto,intercity,shatabdi,udyan,vishakapatnam));
 
-        TrainSchedule sc1 = new TrainSchedule(null, Rajdhadni,delhi,mumbai,"6:00","14:00");
-        TrainSchedule sc2 = new TrainSchedule(null, duranto,delhi,pune,"6:00","18:00");
-        TrainSchedule sc3 = new TrainSchedule(null, intercity,pune,mumbai,"6:00","22:00");
-        TrainSchedule sc4 = new TrainSchedule(null, shatabdi,varanasi,mumbai,"14:00","18:00");
-        TrainSchedule sc5 = new TrainSchedule(null, vishakapatnam,delhi,banglore,"6:00","6:00");
+        TrainSchedule sc1 = new TrainSchedule(null,"Rajdhani","12306 ", Rajdhadni,delhi,mumbai,"6:00","14:00");
+        TrainSchedule sc2 = new TrainSchedule(null, "duranto","12304",duranto,delhi,pune,"6:00","18:00");
+        TrainSchedule sc3 = new TrainSchedule(null,"intercity","12305", intercity,pune,mumbai,"6:00","22:00");
+        TrainSchedule sc4 = new TrainSchedule(null,"shatabdi","12306", shatabdi,varanasi,mumbai,"14:00","18:00");
+        TrainSchedule sc5 = new TrainSchedule(null,"vishakapatnam","12306", vishakapatnam,delhi,banglore,"6:00","6:00");
 
 
 

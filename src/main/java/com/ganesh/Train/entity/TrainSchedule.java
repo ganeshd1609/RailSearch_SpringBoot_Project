@@ -20,6 +20,10 @@ public class TrainSchedule {
     private Long id;
 
 
+    private String trainName;    // e.g. "Rajdhani Express"
+    private String trainNumber;
+
+
     @ManyToOne
     @JsonManagedReference
     @JoinColumn(name = "train_id")
