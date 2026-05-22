@@ -59,6 +59,8 @@ public class Test {
         TrainSchedule sc3 = new TrainSchedule(null,"intercity","12305", intercity,pune,mumbai,"6:00","22:00");
         TrainSchedule sc4 = new TrainSchedule(null,"shatabdi","12306", shatabdi,varanasi,mumbai,"14:00","18:00");
         TrainSchedule sc5 = new TrainSchedule(null,"vishakapatnam","12306", vishakapatnam,delhi,banglore,"6:00","6:00");
+        TrainSchedule sc6 = new TrainSchedule(null,"vishakapatnam","12306", vishakapatnam,delhi,banglore,"6:00","6:00");
+        TrainSchedule sc7 = new TrainSchedule(null,"vishakapatnam","12306", vishakapatnam,delhi,banglore,"6:00","6:00");
 
 
 
